@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Your Locker | Elite Boots</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Assets/CSS/CartStyle.css" />
+    <script src="./Assets/JavaScript/HomePage.js" defer></script>
+    <script src="./Assets/JavaScript/Cart.js" defer></script>
+  </head>
+
+  <body>
+    <header class="locker-header">
+      <div class="header-content">
+        <div class="header-left">
+          <button class="back-btn">
+            <span class="material-symbols-outlined">arrow_back</span>
+          </button>
+          <h1 class="page-title">Your Locker</h1>
+        </div>
+        <div class="header-right">
+          <span class="item-badge">0 ITEMS</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="locker-main">
+      <div class="cart-list"></div>
+
+      <div class="order-summary">
+        <h2 class="summary-title">Order Summary</h2>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span class="summary-val">$0.00</span>
+        </div>
+
+        <div
+          class="summary-row"
+          style="
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+          "
+        >
+          <span>Shipping</span>
+          <span class="summary-val">
+            <span class="shipping-tag">Free Express</span>
+          </span>
+        </div>
+
+        <div class="total-row">
+          <span class="total-label">Total</span>
+          <div class="total-price-block">
+            <span class="total-price">$0.00</span>
+            <p class="vat-text">VAT Included</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="checkout-bar-container">
+      <div class="checkout-wrapper">
+        <button class="btn-checkout">
+          Proceed to Checkout
+          <span class="material-symbols-outlined" style="font-weight: 800"
+            >arrow_forward</span
+          >
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Strikers | Dominate The Pitch</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./Assets/CSS/HomePageStyle.css" />
+    <script src="./Assets/JavaScript/HomePage.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="HomePage.html" class="nav-left">
+        <span class="material-symbols-outlined logo-icon">sports_soccer</span>
+        <h1 class="logo-text">Elite Strikers</h1>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="HomePage.html" class="active">Home</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li>
+          <a href="Cart.html" class="cart-link">
+            Cart <span id="cartCount" class="cart-count"></span>
+          </a>
+        </li>
+        <li>
+          <button id="logoutBtn" class="logout-link">Log Out</button>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <span
+          id="usernameDisplay"
+          style="margin-right: 15px; font-weight: 600; color: #ff1f1f"
+        ></span>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <img
+        class="hero-image"
+        src="./Assets/Images/header.png"
+        alt="Elite football boots on grass"
+      />
+
+      <div class="hero-content">
+        <h2>
+          Dominate <br />
+          <span class="accent-text">The Pitch.</span>
+        </h2>
+        <p>Elite Football Boots Built for Speed and Control.</p>
+        <a href="./Products.html" class="button-primary">Shop Now</a>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="feature">
+        <div class="feature-icon">
+          <span class="material-symbols-outlined">bolt</span>
+        </div>
+        <h3>Speed</h3>
+        <p>Aerodynamic design for rapid acceleration and sudden bursts.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <span class="material-symbols-outlined"
+            >airline_seat_recline_extra</span
+          >
+        </div>
+        <h3>Comfort</h3>
+        <p>Ergonomic fit for 90-minute endurance without fatigue.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <span class="material-symbols-outlined"
+            >settings_input_component</span
+          >
+        </div>
+        <h3>Performance</h3>
+        <p>Precision grip and carbon fiber soles for total ball control.</p>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="products-header">
+        <div>
+          <span class="section-label">New Arrivals</span>
+          <h2>Elite Selection</h2>
+        </div>
+        <a href="products.html" class="view-all">
+          View All
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="./Assets/Images/image1.png" alt="Boot 1" />
+            <span class="badge">Elite</span>
+          </div>
+          <div class="product-info">
+            <h4>Velocity Elite</h4>
+            <p>Speed optimized carbon frame</p>
+            <div class="product-bottom">
+              <span class="price">$249.99</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="./Assets/Images/image2.png" alt="Boot 2" />
+          </div>
+          <div class="product-info">
+            <h4>Control Pro</h4>
+            <p>Total contact synthetic skin</p>
+            <div class="product-bottom">
+              <span class="price">$219.99</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="./Assets/Images/image3.png" alt="Boot 3" />
+          </div>
+          <div class="product-info">
+            <h4>Crimson Striker</h4>
+            <p>Ultra-light sprint technology</p>
+            <div class="product-bottom">
+              <span class="price">$279.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="material-symbols-outlined logo-icon"
+              >sports_soccer</span
+            >
+            <h2 class="logo-text">Elite Strikers</h2>
+          </div>
+          <p class="footer-description">
+            The world's premier destination for high-performance football gear.
+            Engineered for those who demand excellence on every pitch.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Shop</h4>
+          <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Professional Boots</a></li>
+            <li><a href="#">Training Gear</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Support</h4>
+          <ul>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Elite Strikers International. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

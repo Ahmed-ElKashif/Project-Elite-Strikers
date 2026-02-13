@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Elite Boots | Collection</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Assets/CSS/ProductsStyle.css" />
+    <script src="./Assets/JavaScript/HomePage.js" defer></script>
+    <script src="./Assets/JavaScript/ProductsScript.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="HomePage.html" class="nav-left">
+        <span class="material-symbols-outlined logo-icon">sports_soccer</span>
+        <h1 class="logo-text">Elite Boots</h1>
+      </a>
+
+      <div class="search-container">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input type="text" id="searchInput" placeholder="Search boots..." />
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="Products.html" class="active">Products</a></li>
+        <li>
+          <a href="Cart.html" class="cart-link">
+            Cart <span id="cartCount" class="cart-count">0</span>
+          </a>
+        </li>
+        <li><a href="#" id="logoutBtn" class="logout-link">Log Out</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <span id="usernameDisplay" class="user-badge"></span>
+      </div>
+    </nav>
+
+    <div class="main-container">
+      <aside class="sidebar">
+        <div class="filter-header">
+          <h3>Filters</h3>
+          <button id="clearFilters">Clear All</button>
+        </div>
+
+        <div class="filter-section">
+          <h4 class="filter-title">Brand</h4>
+          <div class="filter-group-checkbox" id="brandFilters">
+            <label class="checkbox-label"
+              ><input type="checkbox" value="Nike" /> <span>Nike</span></label
+            >
+            <label class="checkbox-label"
+              ><input type="checkbox" value="Adidas" />
+              <span>Adidas</span></label
+            >
+            <label class="checkbox-label"
+              ><input type="checkbox" value="Puma" /> <span>Puma</span></label
+            >
+            <label class="checkbox-label"
+              ><input type="checkbox" value="Mizuno" />
+              <span>Mizuno</span></label
+            >
+            <label class="checkbox-label"
+              ><input type="checkbox" value="New Balance" />
+              <span>New Balance</span></label
+            >
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h4 class="filter-title">
+            Max Price: $<span id="priceValue">400</span>
+          </h4>
+          <input
+            type="range"
+            id="priceRange"
+            min="50"
+            max="400"
+            value="400"
+            class="price-slider"
+          />
+        </div>
+
+        <div class="filter-section">
+          <h4 class="filter-title">Ground Type</h4>
+          <div class="tags-container" id="categoryFilters">
+            <button class="tag" data-val="Firm Ground">FG</button>
+            <button class="tag" data-val="Soft Ground">SG</button>
+            <button class="tag" data-val="Artificial Grass">AG</button>
+            <button class="tag" data-val="Multi Ground">MG</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content-area">
+        <div class="content-header">
+          <h2 class="page-title">
+            All Products <span class="item-count" id="itemCount">0 items</span>
+          </h2>
+          <select id="sortSelect" class="sort-select">
+            <option value="default">Featured</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+          </select>
+        </div>
+
+        <div id="products-container" class="product-grid"></div>
+      </main>
+    </div>
+  </body>
+</html>

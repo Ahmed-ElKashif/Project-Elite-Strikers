@@ -1,0 +1,268 @@
+/* --- General --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- bg effect --- */
+.bg-gradient {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 31, 31, 0.15) 0%,
+    #0a0a0a 70%
+  );
+}
+
+.smoke-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(10, 10, 10, 0.9)
+  );
+}
+
+/* --- layout --- */
+.main-wrapper {
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- HEADER & IMAGE --- */
+.hero-section {
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.image-frame {
+  width: 100%;
+  height: 16rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 31, 31, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.7s ease;
+  /* Make sure this path is correct relative to your CSS file */
+  background-image: url("../Images/header.png");
+}
+
+.image-frame:hover .hero-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0a0a0a, transparent, transparent);
+}
+
+.text-header {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.text-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: -0.025em;
+}
+
+.highlight {
+  color: #ff1f1f;
+}
+
+.text-header p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --- form --- */
+.glass-card {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.input-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ff1f1f;
+  margin-left: 0.25rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.25rem;
+  user-select: none;
+}
+
+.form-input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  /* Left padding is 2.75rem to account for icons if you add them later */
+  padding: 0.875rem 1rem 0.875rem 2.75rem;
+  color: #ffffff;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.form-input:focus {
+  border-color: #ff1f1f;
+  box-shadow: 0 0 0 1px #ff1f1f;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- button --- */
+.btn-neon {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #ff1f1f;
+  color: #000000;
+  font-weight: 700;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.125rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 31, 31, 0.6);
+  transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 25px rgba(255, 31, 31, 0.8);
+  transform: scale(1.02);
+}
+
+/* --- footer --- */
+.form-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.signin-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+}
+
+.link-highlight {
+  color: #ff1f1f;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.25rem;
+}
+
+.link-highlight:hover {
+  text-decoration: underline;
+}
+
+/* --- brand --- */
+.brand-footer {
+  margin-top: 3rem;
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-text {
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.text-primary {
+  color: #ff1f1f;
+}
+/*error */
+.error-msg {
+  color: #ff3333;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  display: none;
+}
