@@ -1,2 +1,2 @@
 # Project-Elite-Strikers
-this is a small e-commerce website for football shoes  
+This is a Small e-commerce Website For Football Shoes  
