@@ -128,13 +128,32 @@ body {
   margin-bottom: 20px;
 }
 #clearFilters {
-  color: #888;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  color: #a6a6a6; /* Muted gray text */
+  padding: 8px 16px;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 12px;
-  text-decoration: underline;
+  font-weight: 600;
+  text-transform: uppercase; /* Makes it look like a pro label */
+  letter-spacing: 1px;
   cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-top: 10px; /* Space it out from other filters */
 }
+
+/* Hover Effect: Glows Red */
 #clearFilters:hover {
+  border-color: #ff1f1f;
   color: #ff1f1f;
+  box-shadow: 0 0 10px rgba(255, 31, 31, 0.15); /* Subtle neon glow */
+  background: rgba(255, 31, 31, 0.05); /* Very faint red tint */
+}
+
+/* Active/Click Effect */
+#clearFilters:active {
+  transform: scale(0.98); /* Slight press animation */
 }
 
 .filter-section {
