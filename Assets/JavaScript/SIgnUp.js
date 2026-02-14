@@ -102,6 +102,6 @@ function submiting(e) {
     localStorage.setItem("users", JSON.stringify(users));
 
     // Redirect
-    window.location.href = "Login.html";
+    window.location.href = "index.html";
   }
 }
