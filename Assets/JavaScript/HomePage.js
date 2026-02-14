@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       localStorage.removeItem("currentUser");
 
-      window.location.href = "Login.html";
+      window.location.href = "index.html";
     });
   }
 });
