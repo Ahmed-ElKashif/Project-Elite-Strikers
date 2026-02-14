@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const path = window.location.pathname;
   const isAuthPage =
-    path.includes("Login.html") || path.includes("SignUp.html");
+    path.includes("index.html") || path.includes("SignUp.html");
 
   if (!currentUser && !isAuthPage) {
     window.location.href = "index.html";
