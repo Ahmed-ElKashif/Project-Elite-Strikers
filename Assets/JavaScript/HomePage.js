@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     path.includes("Login.html") || path.includes("SignUp.html");
 
   if (!currentUser && !isAuthPage) {
-    window.location.href = "Login.html";
+    window.location.href = "index.html";
   } else if (currentUser) {
     if (usernameDisplay) {
       usernameDisplay.innerText = "Hi, " + currentUser.username;
