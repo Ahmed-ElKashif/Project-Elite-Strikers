@@ -259,7 +259,7 @@ function addToCart(id) {
 
   if (!currentUser) {
     alert("Please log in to add items to your locker.");
-    window.location.href = "Login.html";
+    window.location.href = "index.html";
     return;
   }
 
