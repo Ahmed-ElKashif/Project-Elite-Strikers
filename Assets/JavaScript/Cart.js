@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   if (!currentUser) {
-    window.location.href = "Login.html";
+    window.location.href = "index.html";
   }
   const cartKey = "cart_" + currentUser.email;
   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
